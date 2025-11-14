@@ -20,6 +20,11 @@ export default function JoinPage() {
       });
     }
 
+    // Track Meta Pixel Lead event (when user is about to join Telegram)
+    if (typeof (window as any).fbq !== 'undefined') {
+      (window as any).fbq('track', 'Lead');
+    }
+
     const timer = setInterval(() => {
       setCountdown((prev) => {
         if (prev <= 1) {

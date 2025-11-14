@@ -20,6 +20,11 @@ export default function ContactPage() {
       });
     }
 
+    // Track Meta Pixel Contact event
+    if (typeof (window as any).fbq !== 'undefined') {
+      (window as any).fbq('track', 'Contact');
+    }
+
     const timer = setInterval(() => {
       setCountdown((prev) => {
         if (prev <= 1) {
