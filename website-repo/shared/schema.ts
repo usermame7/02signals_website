@@ -16,16 +16,3 @@ export const insertUserSchema = createInsertSchema(users).pick({
 
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
-
-export interface FileContent {
-  path: string;
-  content: string;
-  isEditable: boolean;
-}
-
-export interface SearchResult {
-  file: string;
-  line: number;
-  content: string;
-  match: string;
-}
