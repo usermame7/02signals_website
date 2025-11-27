@@ -12,23 +12,23 @@ export default function Testimonials() {
     {
       id: 1,
       image: testimonial1Image,
-      result: "Community Participant Growth",
-      feedback: "Excellent learning experience! 👏",
-      description: "Study materials assisting participants in grasping price movements"
+      result: "Member Learning Success",
+      feedback: "Great learning! 👏",
+      description: "Education helping traders understand markets"
     },
     {
       id: 2,
       image: testimonial2Image,
-      result: "Development Milestone Report",
-      feedback: "Solid advancement recently... From this point I can only develop further 💪 Outstanding!!",
-      description: "Regular study materials with chart evaluation perspectives. Outcomes vary individually."
+      result: "Progress This Week",
+      feedback: "Good progress... I can only learn more 💪 Excellent!!",
+      description: "Daily education with chart analysis. Results vary."
     },
     {
       id: 3,
       image: testimonial3Image,
-      result: "Novice Development Path",
-      feedback: "Hello. I'm starting out. This represents my third week",
-      description: "Fresh participants studying chart evaluation via learning resources. Outcomes vary individually."
+      result: "Beginner Week 3",
+      feedback: "Hi. I'm new. This is week 3 for me",
+      description: "New traders learning via education. Results vary."
     }
   ];
 
@@ -40,9 +40,9 @@ export default function Testimonials() {
           ref={headerAnimation.ref}
           className={`text-center mb-18 reveal-from-below ${headerAnimation.isVisible ? 'visible' : ''}`}
         >
-          <h2 className="text-3xl md:text-5xl font-black mb-4.5 gradient-text-v1">Community Development Stories</h2>
+          <h2 className="text-3xl md:text-5xl font-black mb-4.5 gradient-text-v1">Member Success Stories</h2>
           <p className="text-vpfx-muted text-lg max-w-2xl mx-auto">
-            Learning materials supporting participants in informed choices. Outcomes vary individually.
+            Education helping traders make better decisions. Results vary.
           </p>
         </div>
 
@@ -73,7 +73,7 @@ export default function Testimonials() {
                   {testimonial.result}
                 </div>
                 <div className="text-vpfx-green1 font-bold text-sm">
-                  ✅ LEARNING PLATFORM PARTICIPANT
+                  ✅ EDUCATION MEMBER
                 </div>
               </div>
 
@@ -99,11 +99,11 @@ export default function Testimonials() {
         >
           <div className="surface-panel-v2 p-9 max-w-2xl mx-auto">
             <h3 className="text-2xl font-black mb-4.5 text-vpfx-accent">
-              Prepared to Begin Your Education?
+              Ready to Start Learning?
             </h3>
             <p className="text-vpfx-muted mb-7">
-              Access our complimentary messaging community now for regular intelligence. 
-              Study materials exclusively. No performance promises.
+              Join our free Telegram now for daily ideas. 
+              Education only. No guarantees.
             </p>
             <a
               href="/join"
@@ -112,7 +112,7 @@ export default function Testimonials() {
               <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M9.04 15.3l-.38 5.33c.54 0 .78-.23 1.06-.5l2.55-2.45 5.29 3.87c.97.53 1.67.25 1.94-.9l3.52-16.5h.01c.31-1.45-.52-2.02-1.45-1.67L1.1 9.46c-1.41.55-1.39 1.34-.24 1.7l5.1 1.59 11.85-7.48c.56-.34 1.06-.15.64.21L9.04 15.3z"/>
               </svg>
-              Access Learning Platform
+              Join Education Channel
             </a>
           </div>
         </div>

@@ -11,10 +11,10 @@ export default function WhyChooseUs() {
           className={`text-center mb-18 reveal-from-below ${animation.isVisible ? 'visible' : ''}`}
         >
           <h2 className="text-4xl md:text-5xl font-black mb-7 gradient-text-v1">
-            Why Market Participants Choose VictoryPipsFX
+            Why Choose VictoryPipsFX
           </h2>
           <p className="text-vpfx-text/80 text-lg max-w-2xl mx-auto">
-            Intelligence Resources • Study Materials
+            Market Analysis • Education
           </p>
         </div>
 
@@ -22,20 +22,20 @@ export default function WhyChooseUs() {
           {[
             {
               icon: "🎯",
-              title: "Learning-Focused Approach",
-              description: "Clear methodology for understanding market dynamics.",
+              title: "Education First",
+              description: "Clear methods for market understanding.",
               animClass: "reveal-from-start"
             },
             {
               icon: "👨‍💼",
-              title: "Analysis Specialists",
-              description: "Expert group delivering regular market perspectives.",
+              title: "Expert Team",
+              description: "Pros delivering daily market views.",
               animClass: "expand-reveal"
             },
             {
               icon: "⚡",
-              title: "Consistent Market Intelligence",
-              description: "Learning resources and chart studies via messaging service.",
+              title: "Daily Market Ideas",
+              description: "Education and charts via Telegram.",
               animClass: "reveal-from-end"
             }
           ].map((item, index) => (
@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
                   <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M9.04 15.3l-.38 5.33c.54 0 .78-.23 1.06-.5l2.55-2.45 5.29 3.87c.97.53 1.67.25 1.94-.9l3.52-16.5h.01c.31-1.45-.52-2.02-1.45-1.67L1.1 9.46c-1.41.55-1.39 1.34-.24 1.7l5.1 1.59 11.85-7.48c.56-.34 1.06-.15.64.21L9.04 15.3z"/>
                   </svg>
-                  Access Platform
+                  Join Now
                 </a>
               </div>
             </div>

@@ -11,10 +11,10 @@ export default function HowItWorks() {
           className={`text-center mb-18 reveal-from-below ${animation.isVisible ? 'visible' : ''}`}
         >
           <h2 className="text-4xl md:text-5xl font-black mb-7 gradient-text-v1">
-            Straightforward. Quick. Results-Oriented.
+            Easy. Fast. Effective.
           </h2>
           <p className="text-vpfx-text/80 text-lg max-w-2xl mx-auto">
-            Intelligence & Learning Resources • Begin in 4 phases
+            Market Ideas & Education • Start in 4 steps
           </p>
         </div>
 
@@ -23,26 +23,26 @@ export default function HowItWorks() {
             {
               step: "1",
               icon: "📱",
-              title: "Access Platform",
-              description: "Enter our complimentary learning intelligence community"
+              title: "Join Channel",
+              description: "Enter our free education community"
             },
             {
               step: "2", 
               icon: "📱",
-              title: "Obtain Intelligence",
-              description: "Study materials and market perspectives shared regularly"
+              title: "Get Ideas",
+              description: "Market views shared daily"
             },
             {
               step: "3",
               icon: "💰",
-              title: "Study Chart Evaluation", 
-              description: "Examine intelligence with educational annotations and reference points"
+              title: "Study Charts", 
+              description: "Review ideas with annotations"
             },
             {
               step: "4",
               icon: "🎯",
-              title: "Remain Updated & Develop",
-              description: "Learning materials to enhance your analytical capabilities"
+              title: "Keep Learning",
+              description: "Education to improve your skills"
             }
           ].map((item, index) => (
             <div 
@@ -87,7 +87,7 @@ export default function HowItWorks() {
             <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
               <path d="M9.04 15.3l-.38 5.33c.54 0 .78-.23 1.06-.5l2.55-2.45 5.29 3.87c.97.53 1.67.25 1.94-.90l3.52-16.5h.01c.31-1.45-.52-2.02-1.45-1.67L1.1 9.46c-1.41.55-1.39 1.34-.24 1.7l5.1 1.59 11.85-7.48c.56-.34 1.06-.15.64.21L9.04 15.3z"/>
             </svg>
-            <span>Access Our Learning Network</span>
+            <span>Join Education Community</span>
           </a>
         </div>
       </div>

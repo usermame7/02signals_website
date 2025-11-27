@@ -46,25 +46,25 @@ export default function Header() {
               href="/join"
               className="text-vpfx-text hover:text-vpfx-accent font-semibold transition-all duration-300 hover:scale-105"
             >
-              Training Programs
+              Courses
             </a>
             <a 
               href="/join"
               className="text-vpfx-text hover:text-vpfx-accent font-semibold transition-all duration-300 hover:scale-105"
             >
-              Platform Entry
+              Community
             </a>
             <a 
               href="/join"
               className="text-vpfx-text hover:text-vpfx-accent font-semibold transition-all duration-300 hover:scale-105"
             >
-              Complimentary Resources
+              Free Lessons
             </a>
             <a 
               href="/contact"
               className="text-vpfx-text hover:text-vpfx-accent font-semibold transition-all duration-300 hover:scale-105"
             >
-              Reach Out
+              Contact
             </a>
           </div>
 
