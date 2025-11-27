@@ -41,7 +41,7 @@ export default function Hero() {
           
           {/* Feature Chips - Reordered and wrapped */}
           <div className="features-grid-wrapper mb-6 sm:mb-7 px-4">
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-6 sm:mb-7">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
               {[
                 { icon: "⚡", text: "Daily Ideas" },
                 { icon: "📈", text: "Chart Study" },
@@ -57,6 +57,19 @@ export default function Hero() {
                 </span>
               ))}
             </div>
+          </div>
+
+          {/* Telegram Button - moved under feature chips */}
+          <div className="telegram-cta-wrapper mb-8 sm:mb-10 px-4">
+            <a
+              href="/join"
+              className="inline-flex items-center gap-2.5 sm:gap-3.5 px-8 sm:px-11 py-4 sm:py-5 rounded-2xl font-black btn-primary-x9 text-white border-2 border-vpfx-accent/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 active:translate-y-0 active:scale-95 halo-soft shake-loop-anim press-shake-anim text-base sm:text-xl shadow-2xl w-full sm:w-auto justify-center max-w-md mx-auto"
+            >
+              <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9.04 15.3l-.38 5.33c.54 0 .78-.23 1.06-.5l2.55-2.45 5.29 3.87c.97.53 1.67.25 1.94-.90l3.52-16.5h.01c.31-1.45-.52-2.02-1.45-1.67L1.1 9.46c-1.41.55-1.39 1.34-.24 1.7l5.1 1.59 11.85-7.48c.56-.34 1.06-.15.64.21L9.04 15.3z"/>
+              </svg>
+              <span>Join Telegram Now</span>
+            </a>
           </div>
 
           {/* Stats moved before CTAs with wrapper */}
@@ -86,29 +99,17 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Main CTA Buttons - Reordered with wrapper */}
-          <div className="cta-buttons-wrapper mb-10 sm:mb-12 space-y-3 sm:space-y-4 px-4">
-            <div className="text-center space-y-3 sm:space-y-4">
-              <a
-                href="/contact"
-                className="inline-flex items-center gap-2.5 sm:gap-3.5 px-8 sm:px-11 py-4 sm:py-5 rounded-2xl font-black bg-white text-black border-2 border-white transition-all duration-300 hover:scale-105 shake-loop-anim press-shake-anim shadow-2xl text-base sm:text-xl w-full sm:w-auto justify-center max-w-md mx-auto"
-              >
-                <svg className="w-5 h-5 sm:w-6 sm:h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M9.04 15.3l-.38 5.33c.54 0 .78-.23 1.06-.5l2.55-2.45 5.29 3.87c.97.53 1.67.25 1.94-.90l3.52-16.5h.01c.31-1.45-.52-2.02-1.45-1.67L1.1 9.46c-1.41.55-1.39 1.34-.24 1.7l5.1 1.59 11.85-7.48c.56-.34 1.06-.15.64.21L9.04 15.3z"/>
-                </svg>
-                <span>Contact Team</span>
-              </a>
-              <br />
-              <a
-                href="/join"
-                className="inline-flex items-center gap-2.5 sm:gap-3.5 px-8 sm:px-11 py-4 sm:py-5 rounded-2xl font-black btn-primary-x9 text-white border-2 border-vpfx-accent/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 active:translate-y-0 active:scale-95 halo-soft shake-loop-anim press-shake-anim text-base sm:text-xl shadow-2xl w-full sm:w-auto justify-center max-w-md mx-auto"
-              >
-                <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M9.04 15.3l-.38 5.33c.54 0 .78-.23 1.06-.5l2.55-2.45 5.29 3.87c.97.53 1.67.25 1.94-.90l3.52-16.5h.01c.31-1.45-.52-2.02-1.45-1.67L1.1 9.46c-1.41.55-1.39 1.34-.24 1.7l5.1 1.59 11.85-7.48c.56-.34 1.06-.15.64.21L9.04 15.3z"/>
-                </svg>
-                <span>Join Telegram Now</span>
-              </a>
-            </div>
+          {/* Contact Team Button */}
+          <div className="contact-cta-wrapper mb-10 sm:mb-12 px-4">
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-2.5 sm:gap-3.5 px-8 sm:px-11 py-4 sm:py-5 rounded-2xl font-black bg-white text-black border-2 border-white transition-all duration-300 hover:scale-105 shake-loop-anim press-shake-anim shadow-2xl text-base sm:text-xl w-full sm:w-auto justify-center max-w-md mx-auto"
+            >
+              <svg className="w-5 h-5 sm:w-6 sm:h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9.04 15.3l-.38 5.33c.54 0 .78-.23 1.06-.5l2.55-2.45 5.29 3.87c.97.53 1.67.25 1.94-.90l3.52-16.5h.01c.31-1.45-.52-2.02-1.45-1.67L1.1 9.46c-1.41.55-1.39 1.34-.24 1.7l5.1 1.59 11.85-7.48c.56-.34 1.06-.15.64.21L9.04 15.3z"/>
+              </svg>
+              <span>Contact Team</span>
+            </a>
           </div>
 
           {/* Gold & Forex Signals Info Section */}
