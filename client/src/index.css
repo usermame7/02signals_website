@@ -64,78 +64,78 @@
 
 @layer components {
   /* Enhanced Background System */
-  .backdrop-blend-v1 {
+  .wrapper-gradient-bg {
     background: 
-      radial-gradient(1500px 750px at 80% -10%, hsla(195, 100%, 42%, 0.30), transparent 60%),
-      radial-gradient(950px 550px at 10% 90%, hsla(184, 100%, 44%, 0.26), transparent 62%),
-      radial-gradient(750px 380px at 55% 48%, hsla(155, 86%, 52%, 0.09), transparent 68%),
+      radial-gradient(1200px 900px at 15% 85%, hsla(195, 100%, 42%, 0.35), transparent 55%),
+      radial-gradient(800px 600px at 75% 20%, hsla(184, 100%, 44%, 0.28), transparent 58%),
+      radial-gradient(950px 450px at 40% 60%, hsla(155, 86%, 52%, 0.12), transparent 65%),
       var(--bg);
   }
 
-  .backdrop-dots-v1 {
+  .pattern-mesh-bg {
     background-image: 
-      radial-gradient(1.8px 1.8px at 25% 35%, hsla(184, 100%, 44%, 0.28), transparent),
-      radial-gradient(1.2px 1.2px at 45% 65%, hsla(0, 0%, 100%, 0.18), transparent),
-      radial-gradient(1.2px 1.2px at 88% 45%, hsla(195, 100%, 42%, 0.32), transparent),
-      radial-gradient(1.8px 1.8px at 55% 75%, hsla(155, 86%, 52%, 0.22), transparent);
-    background-size: 280px 280px, 220px 220px, 240px 240px, 190px 190px;
+      radial-gradient(2.2px 2.2px at 35% 45%, hsla(184, 100%, 44%, 0.32), transparent),
+      radial-gradient(1.5px 1.5px at 60% 75%, hsla(0, 0%, 100%, 0.22), transparent),
+      radial-gradient(1.8px 1.8px at 80% 30%, hsla(195, 100%, 42%, 0.28), transparent),
+      radial-gradient(2.0px 2.0px at 50% 85%, hsla(155, 86%, 52%, 0.18), transparent);
+    background-size: 310px 310px, 245px 245px, 265px 265px, 215px 215px;
   }
 
   /* Glassmorphism Effects */
-  .translucent-base {
+  .glass-effect-base {
     background: var(--transparent-surface);
-    border: 1px solid var(--transparent-outline);
-    backdrop-filter: blur(18px) saturate(170%);
+    border: 1.5px solid var(--transparent-outline);
+    backdrop-filter: blur(22px) saturate(180%);
   }
 
-  .surface-panel-v2 {
-    @apply translucent-base;
-    border-radius: 1.25rem;
+  .card-container-x3 {
+    @apply glass-effect-base;
+    border-radius: 1.125rem;
     box-shadow: 
-      0 18px 36px var(--shadow-deep),
-      inset 0 1px 0 hsla(0, 0%, 100%, 0.12);
+      0 22px 42px var(--shadow-deep),
+      inset 0 1.5px 0 hsla(0, 0%, 100%, 0.15);
   }
 
   /* Button Enhancements */
-  .cta-style-a1 {
-    background: linear-gradient(140deg, hsl(180, 100%, 55%), hsl(195, 100%, 50%));
-    background-size: 210% 210%;
+  .btn-primary-x9 {
+    background: linear-gradient(135deg, hsl(180, 100%, 56%), hsl(195, 100%, 51%));
+    background-size: 220% 220%;
     position: relative;
     overflow: hidden;
     isolation: isolate;
-    box-shadow: 0 4px 20px hsla(184, 100%, 44%, 0.4),
-                0 0 30px hsla(184, 100%, 44%, 0.3);
+    box-shadow: 0 5px 24px hsla(184, 100%, 44%, 0.45),
+                0 0 35px hsla(184, 100%, 44%, 0.35);
   }
 
-  .cta-style-a1::after {
+  .btn-primary-x9::after {
     content: "";
     position: absolute;
-    inset: 0 -85% 0 -85%;
+    inset: 0 -90% 0 -90%;
     z-index: -1;
-    background: linear-gradient(120deg, transparent 22%, hsla(0, 0%, 100%, 0.38) 48%, transparent 72%);
-    transform: translateX(-105%);
-    transition: transform 0.75s ease;
+    background: linear-gradient(125deg, transparent 20%, hsla(0, 0%, 100%, 0.42) 50%, transparent 75%);
+    transform: translateX(-110%);
+    transition: transform 0.7s ease;
   }
 
-  .cta-style-a1:hover::after {
-    transform: translateX(105%);
+  .btn-primary-x9:hover::after {
+    transform: translateX(110%);
   }
 
   /* Animation Classes */
-  .drift-motion {
-    animation: drift-motion 5.8s ease-in-out infinite;
+  .float-anim-v2 {
+    animation: float-anim-v2 6.2s ease-in-out infinite;
   }
 
-  .illuminate-pulse {
-    animation: illuminate-pulse 3.8s ease-in-out infinite;
+  .glow-pulse-v2 {
+    animation: glow-pulse-v2 4.1s ease-in-out infinite;
   }
 
-  .backdrop-morph {
-    animation: backdrop-morph 18s ease-in-out infinite alternate;
+  .bg-morph-anim {
+    animation: bg-morph-anim 20s ease-in-out infinite alternate;
   }
 
-  .dots-drift {
-    animation: dots-drift 23s linear infinite;
+  .pattern-shift-anim {
+    animation: pattern-shift-anim 25s linear infinite;
   }
 
   .ripple-expand {
@@ -151,24 +151,24 @@
   }
 
   /* Hover shake animation for buttons */
-  .interaction-quake:hover {
-    animation: interaction-quake 0.58s ease-in-out !important;
+  .press-shake-anim:hover {
+    animation: press-shake-anim 0.58s ease-in-out !important;
   }
   
   /* Ensure hover animation takes priority over auto-shake */
-  .interaction-quake:hover.periodic-quake {
-    animation: interaction-quake 0.58s ease-in-out !important;
+  .press-shake-anim:hover.shake-loop-anim {
+    animation: press-shake-anim 0.58s ease-in-out !important;
   }
 
-  .periodic-quake {
-    animation: periodic-quake 6.8s infinite ease-in-out;
+  .shake-loop-anim {
+    animation: shake-loop-anim 6.8s infinite ease-in-out;
   }
   
   /* Ensure auto-shake works on all button types with higher specificity */
-  .cta-style-a1.periodic-quake,
-  a.periodic-quake,
-  button.periodic-quake {
-    animation: periodic-quake 6.8s infinite ease-in-out !important;
+  .btn-primary-x9.shake-loop-anim,
+  a.shake-loop-anim,
+  button.shake-loop-anim {
+    animation: shake-loop-anim 6.8s infinite ease-in-out !important;
   }
   
   /* Enhanced Scroll-based animations */
@@ -294,34 +294,34 @@
 }
 
 /* Keyframes */
-@keyframes drift-motion {
+@keyframes float-anim-v2 {
   0%, 100% { transform: translateY(0px) rotateY(0deg); }
-  50% { transform: translateY(-12px) rotateY(1.8deg); }
+  50% { transform: translateY(-15px) rotateY(2.2deg); }
 }
 
-@keyframes illuminate-pulse {
+@keyframes glow-pulse-v2 {
   0%, 100% {
-    box-shadow: 0 14px 38px hsla(195, 100%, 42%, 0.38),
-                0 0 0 1px hsla(0, 0%, 100%, 0.16) inset,
-                0 2.5px 0 hsla(0, 0%, 100%, 0.22) inset;
+    box-shadow: 0 16px 42px hsla(195, 100%, 42%, 0.42),
+                0 0 0 1.2px hsla(0, 0%, 100%, 0.18) inset,
+                0 3px 0 hsla(0, 0%, 100%, 0.25) inset;
   }
   50% {
-    box-shadow: 0 18px 48px hsla(155, 86%, 52%, 0.48),
-                0 0 0 1px hsla(0, 0%, 100%, 0.16) inset,
-                0 2.5px 0 hsla(0, 0%, 100%, 0.22) inset;
+    box-shadow: 0 20px 52px hsla(155, 86%, 52%, 0.52),
+                0 0 0 1.2px hsla(0, 0%, 100%, 0.18) inset,
+                0 3px 0 hsla(0, 0%, 100%, 0.25) inset;
   }
 }
 
-@keyframes backdrop-morph {
+@keyframes bg-morph-anim {
   0% { transform: scale(1) rotate(0deg); }
-  100% { transform: scale(1.08) rotate(0.8deg); }
+  100% { transform: scale(1.1) rotate(1deg); }
 }
 
-@keyframes dots-drift {
+@keyframes pattern-shift-anim {
   0% { transform: translateY(0px) translateX(0px); }
-  28% { transform: translateY(-18px) translateX(8px); }
-  52% { transform: translateY(-8px) translateX(-4px); }
-  78% { transform: translateY(-28px) translateX(7px); }
+  28% { transform: translateY(-22px) translateX(10px); }
+  52% { transform: translateY(-10px) translateX(-6px); }
+  78% { transform: translateY(-32px) translateX(9px); }
   100% { transform: translateY(0px) translateX(0px); }
 }
 
@@ -358,30 +358,30 @@
   22%, 42%, 62%, 82% { transform: translateY(1.8px); }
 }
 
-@keyframes periodic-quake {
+@keyframes shake-loop-anim {
   0%, 88%, 100% { transform: translateX(0) translateY(0) scale(1); }
-  88.8% { transform: translateX(-9px) translateY(-3.5px) scale(1.038); }
-  89.5% { transform: translateX(9px) translateY(3.5px) scale(1.038); }
-  90.2% { transform: translateX(-7px) translateY(-2.8px) scale(1.028); }
-  90.8% { transform: translateX(7px) translateY(2.8px) scale(1.028); }
-  91.5% { transform: translateX(-5.5px) translateY(-1.8px) scale(1.018); }
-  92.2% { transform: translateX(5.5px) translateY(1.8px) scale(1.018); }
-  92.8% { transform: translateX(-3.5px) translateY(-0.8px) scale(1.008); }
-  93.5% { transform: translateX(3.5px) translateY(0.8px) scale(1.008); }
-  94.2% { transform: translateX(-1.8px) translateY(0) scale(1); }
-  94.8% { transform: translateX(1.8px) translateY(0) scale(1); }
+  88.8% { transform: translateX(-10px) translateY(-4px) scale(1.042); }
+  89.5% { transform: translateX(10px) translateY(4px) scale(1.042); }
+  90.2% { transform: translateX(-8px) translateY(-3.2px) scale(1.032); }
+  90.8% { transform: translateX(8px) translateY(3.2px) scale(1.032); }
+  91.5% { transform: translateX(-6px) translateY(-2px) scale(1.022); }
+  92.2% { transform: translateX(6px) translateY(2px) scale(1.022); }
+  92.8% { transform: translateX(-4px) translateY(-1px) scale(1.012); }
+  93.5% { transform: translateX(4px) translateY(1px) scale(1.012); }
+  94.2% { transform: translateX(-2px) translateY(0) scale(1); }
+  94.8% { transform: translateX(2px) translateY(0) scale(1); }
 }
 
-@keyframes interaction-quake {
+@keyframes press-shake-anim {
   0%, 100% { transform: translateX(0) translateY(0) scale(1); }
-  12% { transform: translateX(-4.5px) translateY(-1.8px) scale(1.018); }
-  22% { transform: translateX(4.5px) translateY(1.8px) scale(1.018); }
-  32% { transform: translateX(-2.8px) translateY(-0.8px) scale(1.008); }
-  42% { transform: translateX(2.8px) translateY(0.8px) scale(1.008); }
-  52% { transform: translateX(-1.8px) translateY(0) scale(1); }
-  62% { transform: translateX(1.8px) translateY(0) scale(1); }
-  72% { transform: translateX(-0.8px) translateY(0) scale(1); }
-  82% { transform: translateX(0.8px) translateY(0) scale(1); }
+  12% { transform: translateX(-5px) translateY(-2px) scale(1.022); }
+  22% { transform: translateX(5px) translateY(2px) scale(1.022); }
+  32% { transform: translateX(-3.2px) translateY(-1px) scale(1.012); }
+  42% { transform: translateX(3.2px) translateY(1px) scale(1.012); }
+  52% { transform: translateX(-2px) translateY(0) scale(1); }
+  62% { transform: translateX(2px) translateY(0) scale(1); }
+  72% { transform: translateX(-1px) translateY(0) scale(1); }
+  82% { transform: translateX(1px) translateY(0) scale(1); }
   92% { transform: translateX(0) translateY(0) scale(1); }
 }
 
@@ -398,7 +398,7 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .surface-panel-v2 {
+  .card-container-x3 {
     @apply p-4;
   }
 }

@@ -18,11 +18,11 @@ export default function Header() {
     <header 
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'translucent-base border-b border-vpfx-accent/20' 
+          ? 'glass-effect-base border-b border-vpfx-accent/20' 
           : 'bg-vpfx-bg/40 backdrop-blur-xl border-b border-white/5'
       }`}
     >
-      <div className="container mx-auto px-6 py-4.5">
+      <div className="container mx-auto px-6 py-5">
         <nav className="flex items-center justify-between gap-5 flex-wrap">
           {/* Brand */}
           <div className="flex items-center gap-3.5 font-black text-lg tracking-wide transition-transform duration-300 hover:-translate-y-0.5">
@@ -32,6 +32,7 @@ export default function Header() {
                   src={logoImage}
                   alt="VictoryPipsFX logo"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  style={{ filter: 'brightness(1.05) contrast(1.02) saturate(1.08)' }}
                 />
               </div>
               {/* Hover glow effect */}

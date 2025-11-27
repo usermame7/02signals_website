@@ -44,7 +44,7 @@ export default function TelegramButton({
       rel={isInternalLink ? undefined : "noopener noreferrer"}
       onClick={handleClick}
       className={cn(
-        "cta-style-a1 inline-flex items-center gap-3 rounded-2xl font-black text-vpfx-bg transition-all duration-300 hover:-translate-y-1 hover:scale-105 active:translate-y-0 active:scale-95 illuminate-pulse periodic-quake interaction-quake group",
+        "btn-primary-x9 inline-flex items-center gap-3 rounded-2xl font-black text-vpfx-bg transition-all duration-300 hover:-translate-y-1 hover:scale-105 active:translate-y-0 active:scale-95 glow-pulse-v2 shake-loop-anim press-shake-anim group",
         sizeClasses[size],
         className
       )}
