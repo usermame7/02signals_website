@@ -11,7 +11,7 @@ export default function DisclaimerPage() {
             Risk Disclaimer
           </h1>
           
-          <div className="glass-card p-8 space-y-6 text-vpfx-text leading-relaxed">
+          <div className="surface-panel-v2 p-8 space-y-6 text-vpfx-text leading-relaxed">
             <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-6 mb-8">
               <h2 className="text-2xl font-bold text-red-400 mb-4">⚠️ IMPORTANT RISK WARNING</h2>
               <p className="text-lg font-semibold">

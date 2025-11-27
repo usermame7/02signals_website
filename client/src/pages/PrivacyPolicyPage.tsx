@@ -11,7 +11,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           
-          <div className="glass-card p-8 space-y-6 text-vpfx-text leading-relaxed">
+          <div className="surface-panel-v2 p-8 space-y-6 text-vpfx-text leading-relaxed">
             <p className="text-lg text-vpfx-muted mb-8">
               <strong>Last Updated:</strong> September 12, 2025
             </p>

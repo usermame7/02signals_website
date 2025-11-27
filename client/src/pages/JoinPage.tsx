@@ -53,11 +53,11 @@ export default function JoinPage() {
     <div className="min-h-screen relative overflow-x-hidden flex items-center justify-center p-4">
       {/* Enhanced Background System */}
       <div className="fixed inset-0 -z-50 pointer-events-none">
-        <div className="bg-gradient-custom animate-bg-shift absolute inset-0" />
-        <div className="bg-particles animate-particles absolute inset-0" />
+        <div className="backdrop-blend-v1 backdrop-morph absolute inset-0" />
+        <div className="backdrop-dots-v1 dots-drift absolute inset-0" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-vpfx-bg/15 to-vpfx-bg/35" />
       </div>
-      <div className="max-w-md w-full glass-card rounded-2xl p-8 text-center relative z-10">
+      <div className="max-w-md w-full surface-panel-v2 rounded-2xl p-8 text-center relative z-10">
         <div className="mb-6">
           <Loader2 className="h-12 w-12 text-cyan-400 animate-spin mx-auto mb-4" />
           <h1 className="text-2xl font-bold text-white mb-2" data-testid="text-redirect-title">
