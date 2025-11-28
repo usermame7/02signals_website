@@ -6,21 +6,12 @@ export default function ThankYouPage() {
   const telegramUrl = "https://t.me/+qyTeUgsGYGdhY2M8";
 
   useEffect(() => {
-    // Google Analytics tracking
+    // Google Analytics tracking only - NO Lead event here
+    // Lead event fires on /join page only
     if (typeof (window as any).gtag !== 'undefined') {
       (window as any).gtag('event', 'page_view', {
-        page_title: 'Thank You - Joined Successfully',
+        page_title: 'Thank You',
         page_location: window.location.href
-      });
-    }
-
-    // Meta Pixel Lead Event - fires ONLY on this completion page
-    // This fires AFTER the base pixel's PageView (which loads in index.html)
-    // Order: Base Pixel (in head) → PageView (automatic) → Lead (here)
-    if (typeof (window as any).fbq !== 'undefined') {
-      (window as any).fbq('track', 'Lead', {
-        value: 0.00,
-        currency: 'USD'
       });
     }
   }, []);

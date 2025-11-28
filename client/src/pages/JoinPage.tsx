@@ -1,28 +1,35 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
-import { useLocation } from "wouter";
 
 export default function JoinPage() {
-  const [countdown, setCountdown] = useState(3);
-  const [, setLocation] = useLocation();
+  const [countdown, setCountdown] = useState(5);
+  const telegramUrl = "https://t.me/+qyTeUgsGYGdhY2M8";
 
   useEffect(() => {
-    // Track the redirect page visit with Google Analytics (NO Lead event here)
+    // STEP 1: Fire Meta Pixel Lead Event FIRST (before redirect timer starts)
+    // This fires immediately when user lands on /join confirmation page
+    if (typeof (window as any).fbq !== 'undefined') {
+      (window as any).fbq('track', 'Lead', {
+        value: 0.00,
+        currency: 'USD'
+      });
+    }
+
+    // Google Analytics tracking
     if (typeof (window as any).gtag !== 'undefined') {
       (window as any).gtag('event', 'page_view', {
-        page_title: 'Join Redirect',
+        page_title: 'Join Confirmation',
         page_location: window.location.href
       });
     }
 
-    // NO Lead event on this redirect page - Lead fires on /thank-you only
-
+    // STEP 2: Start redirect timer AFTER Lead event has fired
     const timer = setInterval(() => {
       setCountdown((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
-          setLocation('/thank-you');
+          window.location.href = telegramUrl;
           return 0;
         }
         return prev - 1;
@@ -30,10 +37,10 @@ export default function JoinPage() {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [setLocation]);
+  }, []);
 
   const handleDirectRedirect = () => {
-    setLocation('/thank-you');
+    window.location.href = telegramUrl;
   };
 
   return (
@@ -48,10 +55,10 @@ export default function JoinPage() {
         <div className="mb-6">
           <Loader2 className="h-12 w-12 text-cyan-400 animate-spin mx-auto mb-4" />
           <h1 className="text-2xl font-bold text-white mb-2" data-testid="text-redirect-title">
-            Welcome to VictoryPipsFX
+            Joining…
           </h1>
           <p className="text-gray-300" data-testid="text-redirect-description">
-            Preparing your access to our community...
+            Your access is being confirmed. You will be redirected in a moment.
           </p>
         </div>
 
@@ -60,7 +67,7 @@ export default function JoinPage() {
             {countdown}
           </div>
           <p className="text-sm text-gray-400">
-            Please wait {countdown} seconds
+            Redirecting in {countdown} seconds
           </p>
         </div>
 
@@ -69,11 +76,11 @@ export default function JoinPage() {
           className="w-full bg-cyan-600 hover:bg-cyan-700 text-white"
           data-testid="button-manual-redirect"
         >
-          Continue Now
+          Join Now
         </Button>
 
         <p className="text-xs text-gray-500 mt-4">
-          Click the button to skip the wait
+          Click the button to join immediately
         </p>
       </div>
     </div>
